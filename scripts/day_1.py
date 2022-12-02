@@ -1,3 +1,6 @@
+import get
+
+
 class Elf:
     def __init__(self, inventory):
         self._inventory = inventory.split("\n")
@@ -31,16 +34,8 @@ def get_list_of_calories_carried():
     return list_of_calories
 
 
-def get_input():
-    complete_input = ""
-    with open("input", "r") as input:
-        for line in input:
-            complete_input += line
-    return complete_input
-
-
 def get_elves():
-    input = get_input()
+    input = get.input()
     list_of_elves = []
     elves = input.split("\n\n")
     for inventory in elves:
